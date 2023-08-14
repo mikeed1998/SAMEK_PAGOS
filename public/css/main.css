@@ -1,0 +1,2383 @@
+*{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Blinker', sans-serif;
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//*   pagina Inicio   *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* <!-- Primera seccion --> */
+.index{
+    width: 100%;
+    height: 100%
+}
+.seccion1Index{
+    display: flex;
+    height: 700px;
+    
+    background-image: url(../img/design/fondo_index.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center ;
+	
+
+}
+.contenetBorder{
+    position: absolute;
+    margin-top: 10px;
+    width: 97%;
+    height: 100%;
+    border-color: white;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-left:7px solid #fff;
+    border-right: 7px solid #fff;
+    border-top: 7px solid #fff;
+    z-index: 5px;
+}
+.seccion1Index .contenetBorder{
+    position: absolute;
+    margin-top: 10px;
+    width: 97%;
+    height: 685px;
+    border-color: white;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-left:7px solid #fff;
+    border-right: 7px solid #fff;
+    border-top: 7px solid #fff;
+    z-index: 5px;
+}
+.seccionIzqIndex{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+@media (max-width: 550px) {
+    .josue{
+        display: none;
+    }
+}
+.contseccionIzqIndex{
+    color: white;
+    width: 75%;
+    text-align: justify;
+}
+.contseccionIzqIndex h1{
+    font-size: 50px;
+}
+.contseccionIzqIndex p{
+    margin-top: -20px;
+	margin-bottom: 30px;
+}
+/* <!-- Primera seccion --> */
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* <!-- Segunda seccion --> */
+.seccion2Index{
+    width: 100%;
+    height: 100%;
+}
+.tituloSeccion2{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1rf));
+}
+.tituloSeccion2 h1{
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 40px;
+    color: #c42227;
+}
+.contLinSec21{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	
+}
+.contLinSec2{
+    width: 22%;
+    display: flex;
+    justify-content: space-between;
+}
+.linSec2{
+    width: 45%;
+    height: 5px;
+    border-radius: 10px;
+    background: #c42227;
+}
+.contLinSec2 img{
+    margin-top: -10px;
+}
+
+.textSeccion2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.textSeccion2 div{
+    text-align: center;
+    min-width: 300px;
+    max-width: 600px;
+	margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+.ContCardsSeccion2_1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+	text-decoration: none;
+	
+}
+.ContCardsSeccion2_1 a{
+
+	text-decoration: none;
+	color: #000000;
+	
+}
+.ContCardsSeccion2{
+    position: relative;
+    width: 90%;
+    max-width: 1500px;
+    display: flex; 
+    justify-content: center;
+    
+}
+.ContCardsSeccion3{
+    position: relative;
+    width: 63%;
+    max-width: 1077px;
+    height: 100%;
+    display: flex;  
+}
+.cadrSec2{
+    min-width: 250px;
+    max-width: 335px;
+    margin: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 50px;    
+    height: 350px;
+	min-height: 350px;
+	max-height: 350px;
+    background: #ffffff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+    border-radius:2px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+	
+}
+.titCardSec2{
+    margin: 0% auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+	text-decoration: none;
+
+}
+.titCardSec2 div{
+
+	text-decoration: none;
+
+}
+.titCardSec2 h2{
+    font-size: 100%;
+    margin-top: 20px;
+	margin-bottom: 20px;
+	color: #000000	;
+}
+.linCard2{
+    margin-top: -15px;
+    width: 200px;
+    height: 4px;
+    border-radius: 10px;
+    background: #c42227;
+}
+.ContTxtCadrSec2{
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+	overflow-y: scroll;
+    scroll-behavior: auto;
+}
+.ContTxtCadrSec3{
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    font-size: 12px;
+	overflow-y: scroll;
+    scroll-behavior: auto;
+}
+.ContTxtCadrSec2 p{
+    text-align: justify;
+    width: 85%;
+}
+
+.ContCicCardSec2{
+    margin-top: 55px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contDiamsec2{
+    width: 100%;
+    justify-content: start;
+}
+.contDiamsec2 img{
+    margin-bottom: 0px;
+    width: 12%;
+}
+.circles2{
+    margin-top: 0px;
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background: #fff;
+    border: 4px solid #c42227;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circles2 img{
+    width: 98px;
+    height: 98px;
+    border-radius: 100%;
+}
+.BotonesSliderSec2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.BotonesSliderSec2 button{
+    width: 32px;
+    border: none;
+    background: none;
+    transition: 0.4s;
+}
+
+/* <!-- Segunda seccion --> */
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* <!-- tercera seccion --> */
+.form-solicita input::placeholder { 
+    color: white; 
+}
+.form-solicita input:focus{ 
+    outline: none;
+}
+.form-solicita2 input::placeholder { 
+    color: rgb(0, 0, 0); 
+}
+.form-solicita2 input:focus{ 
+    outline: none;
+}
+
+
+.contTseccion3{
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+.Tseccion3{
+    width: 27.2em;
+    border-radius: 50px;
+    text-align: center;
+    color: white;
+    background: red;
+}
+.Tseccion3 h1{
+    margin: auto;
+    font-size: 30px;
+}
+.seccion3{
+    width: 100%;
+    height: 500px;
+    background: black;
+    background: linear-gradient(rgba(#000000));
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.Kgrandesec3 img{
+    width: 450px;
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 2%;
+    z-index: 500;
+
+}
+.formSec3{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.formSec3_2{
+    width: 50%;
+    margin: 0;
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tituloFrom{
+    width: 50%;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.formSec3_2 .input-group{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.input-group2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formSec3_2 form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.formSec3_2 .input-group input{
+    width: 30%;
+    margin: 10px 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    border-bottom: 4px solid #fff;
+    text-decoration: none;
+    outline: none;
+}
+.formSec3_2 .input-group2 input{
+    margin: 10px 0;
+    width: 63%;
+    background: none;
+    border: none;
+    color: #fff;
+    border-bottom: 4px solid #fff;
+    text-decoration: none;
+    outline: none;
+}
+.contButon{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contButon button{
+    margin-top: 1em;
+    width: 100px;
+    height: 25px;
+    background: #fff;
+    border: 3px solid #c42227;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+/* <!-- tercera seccion --> */
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* <!-- cuarta seccion --> */
+.seccion4{
+    width: 100%;
+    height: 500px;
+}
+
+.cartaGrandeSec4{
+    width: 100%;
+    height: 100%;
+}
+.cartasec1{
+    margin: 6.8EM auto;
+    width: 80%;
+    height: 80%;
+    background: #ffffff;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.CT1sectitulo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.CT1sectitulo h1{
+    margin-top: 80px;
+    margin-left: 30px;
+    width: 300px;
+    color: #c42227;
+}
+.CT1Linea{
+    margin-top: -20px;
+    margin-left: 30px;
+    width: 225px;
+    height: 5px;
+    background: #c42227;
+    border-radius: 20px;
+}
+.CT1Img{
+    width: 100%;
+}
+.CT1sectitulo img{
+    margin-top: -13px;
+    margin-left: 255px;
+    position: absolute;
+    width: 30px;
+}
+.CT1Context{
+	max-width: 500px;
+	margin-right: 20px;
+
+    
+}
+.CT1Context div{
+    width: 98%;
+    min-height: 100px;
+	max-height: 120px;
+    margin-left: 10px;
+    text-align: justify;
+    overflow-y: scroll;
+	scroll-behavior: auto;
+    margin-left: 30px;
+}
+.CT1TxtDesc{
+    width: 100%;
+}
+.CT1TxtDesc a{
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+}
+.CT1TxtDesc i{
+    color: black;
+    margin-left: 10px;
+}
+/* <!-- cuarta seccion --> */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//*   pagina Inicio   *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//*   pagina servicios *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.cont-blanco-serv{
+    margin-top: 200px;
+}
+.cont-img-poli{
+    margin-top: 300px;
+}
+.img-slick{
+    min-width: 300px;
+    max-width: 500px;
+}
+.servicios .contenetBorder{
+    height: 685px;
+}
+.seccion1Servicios{
+    display: flex;
+    height: 700px;
+    justify-content: center;
+    background: #f7f7f7;
+}
+/* .seccion1Servicios{
+    display: flex;
+    height: 700px;
+    justify-content: center;
+    background: #f7f7f7;
+    
+} */
+.seccionIzqServicios{
+	position: relative;
+    width: 100%;
+    height: 97%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* .seccionIzqServicios{
+    width: 100%;
+    height: 97%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: red;
+    padding-top: 200px;
+} */
+.ContseccionIzqServicios{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.BotonesSliderServisios{
+    margin-top: 50px;
+}
+.BotonesSliderServisios button{
+    background: none;
+    border: none;
+}
+.BotonesSliderServisios i{
+    width: 80px;
+    font-size: 20px;
+}
+.ContseccionIzqServicios1{
+    margin-top: -200px;
+    width: 500px;
+}
+.ContseccionIzqServicios img{
+    width: 31.25em;
+    height: 31.25em;
+    border-radius: 100%;
+}
+
+.cuadroServicios{
+    position: absolute;
+    width: 40%;
+    max-width: 43.75em;
+    min-width: 31.25em;
+	min-height: 600px;
+	max-height: 650px;
+    margin-top: 400px;
+    margin-left: 50%;
+    background: #ffffff;
+    border-radius: 40px;
+    box-shadow: 3px 3px 20px 15px rgba(0, 0, 0, 0.1);
+}
+/* .cuadroServicios{
+    position: relative;
+    width: 40%;
+    max-width: 43.75em;
+    min-width: 31.25em;
+    height: 37.5em;
+    margin-top: 20px;
+    margin-left: 50px;
+    background: #a6a6a6;
+    border-radius: 40px;
+    box-shadow: 3px 3px 20px 15px rgba(0, 0, 0, 0.1);
+} */
+.ContTextCuadroServ{
+    width: 100%;
+    padding-top: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ContTextCuadroServ h1{
+    width: 80%;
+	text-transform: uppercase;
+}
+.LineRserviceC{
+    margin-top: -20px;
+    width: 250px;
+    height: 7px;
+    background: red;
+    border-radius: 20px;
+}
+
+.text-service-cont{
+	margin-top: 20px;
+	width: 100%;
+	height: 400px;
+	max-height: 400px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	overflow-y: scroll;
+    scroll-behavior: auto;
+   }
+   ::-webkit-scrollbar {
+	display: none;
+	}
+   .text-service-cont div{
+	width: 90%;
+	height: 100%;
+	text-align: justify;
+
+   }
+
+.text-service-cont p{
+    margin-top: 0px;
+    width: 85%;
+    height: 75%;
+   }
+
+   .divBtnCuadro{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   }
+   .divBtnCuadro button{
+	margin-top: 30px;
+	margin-bottom: 5px;
+    width: 150px;
+    background: black;
+    border: none;
+    font-weight: bold;
+    border-radius: 30px;
+    color: #ffffff;
+   }
+   .CuadroOtro{
+    display: none;
+
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.seccion2Service{
+    margin-top: 200px;
+    margin-bottom: 100px;
+    width: 100%;
+    height: 100%;
+}
+.tituloSeccion2Service{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+}
+.tituloSeccion2Service h1{
+    margin-top: 50px;
+    padding-left: 15%;
+    font-size: 40px;
+    color: #000000;
+}
+.contLinSec2Serv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.contLinSec2Serv .contLinSec2{
+    width: 100%;
+    display: flex;
+}
+.contLinSec2Serv .contLinSec2 .linSec2{
+    margin-left: 15%;
+    margin-top: -25px;
+    margin-bottom: 100px;
+    width: 15%;
+    height: 7px;
+    border-radius: 10px;
+    background: #c42227;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.seccion3-service .formSec3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seccion3-service .formSec3_2{
+    width: 55%;
+}
+.seccion3-service .input-group , .seccion3-service .input-group2{
+    margin: 20px auto;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//*   pagina servicios *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//*   pagina Vacantes *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.seccion1Vacantes{
+    display: flex;
+    height: 250px;
+    justify-content: center;
+    background: #f7f7f7;
+}
+
+.Vacantes-Seccion2{
+    width: 100%;
+    height: 500px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	justify-content: center ;
+}
+.Vacantes-Seccion3{
+    margin-top: -500px;
+    margin-bottom: -100px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont1-Vacantes-Seccion3{
+    position: relative;
+    margin: 200px auto;
+    width: 90%;
+    max-width: 1293px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: auto 20px;
+}
+
+.Cont-Cads-Vac-Sec3{
+    margin-top: 100px;
+    margin-left: 15px;
+    margin-bottom: 50px;
+    margin-right: 15px;
+    width: 300px;
+    height: 100%;
+    min-height: 100px;
+    max-width: 300px;
+    min-width: 300px;
+    background: #ffffff;
+    box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.1);
+}
+.Head-Card-Vac-Sec3{
+    position: absolute;
+    margin: -100px 80px;
+    width: 150px;
+    height: 150px;
+    background: rgb(255, 255, 255);
+    border-radius: 100%;
+    border:3px solid rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.Head-Card-Vac-Sec3 img{
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+}
+.Cont-Titulo-cards-vac-sec3{
+    margin-top: 65PX;
+    width: 100%;
+    font-size: 9PX;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.Cont-Titulo-cards-vac-sec3 h1{
+    width: 80%;
+    font-size: 18px;
+}
+.Cont-Titulo-cards-vac-sec3 p{
+    margin-top: 3px;
+    width: 80%;
+    font-size: 14px;
+    font-weight: bold;
+}
+.LineRVacantes{
+    margin-top: -10px;
+    width: 210px;
+    height: 5px;
+    background: #c42227;
+    border-radius: 20px;
+}
+.Cont-Menu-Cards-Sec3{
+    width: 100%;
+    height: 100%;
+}
+.Cont-Menu-Cards-Sec3 .Ulfather{
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+.Cont-Menu-Cards-Sec3 .Ulfather .Lifather{
+
+}
+.Cont-Menu-Cards-Sec3 .Ulfather .Lifather .Cont-Div-Li-Sec3{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #e8e8e8;
+}
+.Cont-Div-Li-Sec3 p{
+    margin-left: 10px;
+}
+.Cont-Div-Li-Sec3 button{
+    margin-right: 10px;
+	border: none;
+	background: none;
+}
+.Cont-Div-Li-Sec3 i{
+
+}
+.Cont-Menu-Cards-Sec3 ul li i{
+    /* width: 280px;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    font-size: 20px; */
+}
+
+.Cont-Vac-Ofert{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.Cont-Vac-Ofert div{
+	margin: 0 0px;
+	text-align: justify;
+    font-size: .95em;
+}
+.Cont-Vac-VacDisp{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+.Cont-Vac-Salario{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+}
+
+.Cont-Button-Cards-sec3{
+    margin: 5px auto;
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Cont-Button-Cards-sec3 button{
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    background: #ff222a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.Cont-Button-Cards-sec3 a{
+text-decoration: none;
+position: absolute;
+width: 120px;
+height: 40px;
+border-radius: 30px;
+border: none;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: bold;
+}
+.Cont-Menu-Cards-Sec3 ul li .children{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition-duration: 5s;
+}
+/* .Cont-Menu-Cards-Sec3 ul li:hover .children{
+    display: block;
+} */
+
+.Cont-Menu-Cards-Sec3 ul li .children .liChild{
+    max-height: 100%;
+    background: none;
+    font-size: 12px;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+}
+.Cont-Menu-Cards-Sec3 ul li .children .liChild i{
+    margin-left: 10px;
+}
+.Cont-Menu-Cards-Sec3 ul li .children .liChild p{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 30px;
+    text-align: justify;
+}
+.accordion-button:focus {
+    z-index: 3;
+    border-color: none;
+    outline: none;
+    box-shadow: none;
+}
+.accordion-button:hover {
+    z-index: 3;
+    border-color: none;
+    outline: none;
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+    color: black;
+    background-color:white;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//*   pagina Vacantes *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//*   pagina soluciones *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.Soluciones{
+    width: 100%;
+    height: 100%
+}
+.Soluciones .contenetBorder{
+	height: 233px;
+
+}
+.Soluciones-Seccion2{
+    height: 850px;
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	justify-content: center ;
+}
+
+.Soluciones-Seccion3{
+    margin-top: -200px;
+    margin-bottom: -100px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.Soluciones-Seccion3 .Cont-Cads-Vac-Sec3{
+    min-height: 300px;
+}
+.Soluciones-Seccion3 .Cont-Cads-Vac-Sec3 .Cont-Titulo-cards-vac-sec3 h1{
+    min-height: 42px;
+}
+.Soluciones-Seccion3 .Cont-Cads-Vac-Sec3 .Cont-Text-Serv-Cards-Sec3 p{
+    min-height: 96px;
+}
+
+
+.Cont-Text-Serv-Cards-Sec3{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Cont-Text-Serv-Cards-Sec3 div{
+    margin: 10px 20px;
+    font-size: 14px;
+    text-align: center;
+}
+.Cont-Enlace-Serv-Cards-Sec3{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Cont-Enlace-Serv-Cards-Sec3 a{
+    margin: 15px auto;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #000000;
+}
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//*   pagina soluciones *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//*   pagina contacto *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.Contacto .contenetBorder{
+    height: 685px;
+}
+.Cont-Sec1-contact-forms-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+.Cont-Contac-Sec1{
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(rgba(#000000));
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* .Cont-Contac-Sec1 .formSec3{
+    width: 100%;
+    display: flex;
+} */
+.Cont-Contac-Sec1 .formSec3_2{
+    width: 719px;
+    max-width: 720px;
+    min-width: 300px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Cont-Contac-Sec1 .tituloFrom{
+    width: 100%;
+    color: #c42227;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.formSec3_2 .input-group{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.input-group2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formSec3_2 form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.Cont-Contac-Sec1 .formSec3_2 .input-group input{
+    width: 100%;
+    margin: 10px 10px;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    border-bottom: 4px solid rgb(0, 0, 0);
+    text-decoration: none;
+    outline: none;
+}
+.Cont-Contac-Sec1 .formSec3_2 .input-group2 input{
+    width: 100%;
+    margin: 10px 10px;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    border-bottom: 4px solid rgb(0, 0, 0);
+    text-decoration: none;
+    outline: none;
+}
+.contButon{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contButon button{
+    margin-top: 1em;
+    width: 100px;
+    height: 25px;
+    background: #fff;
+    border: 3px solid #c42227;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+.Div-Contact-Info-Datos{
+    width: 719px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    text-align: end;
+}
+.Div-Num-Contact-Info{
+    width: 100%;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+.Div-Direccion-Contact-Info{
+    width: 100%;
+    align-items: flex-end;
+}
+
+.Div-Maps iframe{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//*   pagina contacto *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.bodyIni{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//*   pagina Nosotros  *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* <!-- Menu de la cabecera --> */
+.btn-Menu-Icon{
+    display: none;
+}
+.iconmenu{
+    display: none;
+}
+
+.headerIni{
+    /* width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+}
+.menuIndex{
+    /* padding: 10px;
+    display: flex; */
+}
+.menuIndex .Ul-Cont-Father{
+    display: block;
+    list-style: none;
+    margin-left: 10px;
+    display: flex;
+}
+.menuIndex .Ul-Cont-Father .Li-Cont-Menu{
+    margin: 10px;
+}
+.menuIndex .Ul-Cont-Father .Li-Cont-Menu .Cont-Li-F-A{
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+}
+.btn-li-services{
+    align-items: center;
+	background: none;
+	border: none;
+	font-size: 16px;
+	
+}
+.nav-item{
+    border-radius: 13px;
+    transition: 0.5s ease;
+}
+.nav-item:hover{
+    background: grey;
+}
+.nav-item:hover .nav-link:hover{
+    color: white;
+}
+
+.Cont-ul-Head{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 5px;
+    width: 350px;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 20px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    list-style: none;
+	display: none;
+}
+.menuIndex .Li-Cont-Menu:hover{
+    background-color: rgba(0, 0, 0, .3);
+    text-decoration: underline;
+    border-radius: 3px; 
+	text-decoration: none;
+}
+
+
+.Cont-father-Menu{
+    width: 90px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+.Cont-Tit-Ul-Menu{
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.Cont-Tit-Ul-Menu h2{
+    width: 100%;
+    margin-left: 10px;
+    font-weight: 400;
+}
+.Line-Menu-Ul{
+    margin-top: -5px;
+    margin-left: 10px;
+    width: 250px;
+    height: 3px;
+    border-radius: 20px;
+    background: #ff222a;
+}
+.Cont-ul-Head-Li{
+    margin-top: 5px;
+    margin-left: 10px;
+    padding: 0;
+    width: 95%;
+    height: 100%;
+    transition: 0.4s;
+	
+}
+.Cont-ul-Head-Li p:hover{
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 3px;
+}
+
+.Cont-ul-Head-Li p{
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+    font-size: 14px;
+	
+}
+.Cont-ul-Head-Li a{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #000000;
+    transition: 0.5s;
+}
+.menuIndex li.active{
+    transition: 0.4s;
+    text-decoration: underline;
+    border-radius: 3px;
+}
+
+
+
+
+.ContTel{
+    /* padding: 10px;
+    display: flex;
+    justify-content: center; */
+}
+.ContTel p{
+    margin-top: 25px;
+    margin-right: 20px;
+}
+.divRedes{
+    padding-top: 20px;
+}
+.divRedes img{
+    margin-right: 5px;
+}
+/* <!-- Menu de la cabecera FIN --> */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* <!-- Parte inicial de explicacion de SEKTOR --> */
+.contentIni1{
+    width: 100%;
+    background: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.contentIniP{
+    width: 97%;
+    height: 620px;
+    border-color: white;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background: #f7f7f7;
+    border-left:7px solid #fff;
+    border-right: 7px solid #fff;
+    border-top: 7px solid #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.divguardias{
+    margin-top: 50px;
+    margin-left: 10%;
+}
+.guardiasfoto{
+    position: absolute;
+    z-index: 5px;
+}
+.circuloR{
+    margin-top: 30px;
+    position: absolute;
+}
+.divtextguardias{
+    margin-top: 150px;
+    margin-left: 45%;
+}
+.textGuar{
+    margin-top: 5px;
+    width: 90%;
+    max-width: 860px;
+    max-height: 300px;
+    overflow-y: scroll;
+    scroll-behavior: auto;
+}
+.textGuar p{
+    font-size: medium;
+    text-align: justify;
+}
+.barraR{
+    margin-top: 10px;
+    width: 60%;
+    height: 10px;
+    border-radius: 10px;
+    background: red;
+}
+/* <!-- Parte inicial de explicacion de SEKTOR FIN --> */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* <!-- parte de Mision, Vision, Valores y Certificacion --> */
+.contentIni2{
+    margin-top: 80px !important;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content2iniFlex{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.tarjetasInfo{
+    width: 300px;
+    margin: 50PX;
+
+}
+.TarjetaT{
+    display: flex;
+    flex-direction: row;
+}
+.tarjetaText{
+    margin-top: -30px;
+    min-height: 200px;
+    max-height: 200px;
+    margin-bottom: 15px;
+    text-align: justify;
+        overflow-y: scroll;
+    scroll-behavior: auto;
+}
+.barraRT{
+    width: 50%;
+    height: 6px;
+    border-radius: 10px;
+    background: red;
+}
+.contentIni2_2{
+    margin-top: 50px !important;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.contentIni2_2 h1{
+    font-size: 50px;
+}
+.contentIni2_2 p{
+    margin-top: -30px;
+    text-align: center;
+    width: 60%;
+}
+/* <!-- parte de Mision, Vision, Valores y Certificacion FIN --> */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* <!-- contenido de cartas circulares con fondo de imagen  --> */
+.contentIni3{
+    width: 100%;
+    height: 500px;
+    background: #000000;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.conteIni3Fondo{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.789);
+    color: #fff;
+}
+.Carts3{
+    text-align: center;
+    margin: 130px;
+}
+.contentCarts3{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.contentCarts3T{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+.contentCarts3T img{
+    position: absolute;
+    width: 200px;
+}
+.contentCarts3T h1{
+    font-size: 50px;
+}
+.Carts3 h2{
+    margin-top: 60px;
+    font-size: 20px;
+}
+.barraRT3{
+    width: 50%;
+    height: 6px;
+    border-radius: 10px;
+    background: rgb(216, 216, 216);
+}
+.ContbarraRT3{
+    margin-top: -5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.Carts3Text{
+    margin-top: -5px;
+    width: 300px;
+    text-align: center;
+}
+/* <!-- contenido de cartas circulares con fondo de imagen FIN --> */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* <!-- Contenido de los clientes  --> */
+.content4{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f7f7f7;
+    flex-direction: column;
+
+}
+.content4Fondo{
+    margin-bottom: 10px;
+    width: 97%;
+    height: 100%;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-left:7px solid #fff;
+    border-right: 7px solid #fff;
+    border-bottom: 7px solid #fff;
+    display: flex;
+    flex-direction: column;
+    /* overflow-y: scroll;
+    scroll-behavior: auto; */
+}
+.content4Titulo{
+width: 100%;
+text-align: center;
+}
+.content4Titulo h1{
+    margin-top: 10px;
+    color: red;
+    font-size: 50px;
+}
+.content4CardsClient{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cards4{
+    position: relative;
+    min-width: 300px;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards4 img{
+    width: 200px;
+}
+/* <!-- Contenido de los clientes FIN  --> */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* FOOTER MENU INICIO */
+.footermenu{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footermenu img{
+    margin-top: 10px;
+}
+.footermenu ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 0px;
+}
+.footermenu li{
+    list-style: none;
+}
+.footermenu li a{
+    margin: 10px;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+/* FOOTER MENU FIN */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* FOOTER TEXTO FINAL */
+.footerIni{
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.footerIni p{
+    font-size: 12px;
+}
+.RedesFooter{
+    position: relative;
+    width: 95%;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 20px;
+
+}
+.RedesFooter img{
+    margin: 5px;
+}
+/* FOOTER TEXTO FINAL */
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//* end pagina nosotros *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// *//* responsive web des *//* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */                       /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                                        /* 1366px */
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* @media only screen and (min-width: 1367px) {
+    .cont1-Vacantes-Seccion3{
+        position: relative;
+        margin: 200px auto;
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: auto 20px;
+    }
+
+} */
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                                        /* 1366px */
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media only screen and (max-width: 1366px) {
+    .ContCardsSeccion2{
+        position: relative;
+        
+        height: 100%;
+        display: flex;
+    }
+    .Div-Contact-Info-Datos{
+        width: 719px;
+        height: 50%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        text-align: center;
+    }
+    .Div-Num-Contact-Info{
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+    .Div-Direccion-Contact-Info{
+        width: 100%;
+        align-items: flex-end;
+    }
+}
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                                        /* 1135px */
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media only screen and (max-width: 1199px) {
+.nav-link{
+    text-align: center;
+}
+.nav-item:hover{
+    background: none;
+}
+.nav-item:hover .nav-link:hover{
+    color: rgb(0, 0, 0);
+}
+.Cont-ul-Head{
+    position: relative;
+    width: 100%;
+    background: #7e7e7e;
+    color: white;
+    text-align: center;
+    margin-left: 10px;
+}
+.Line-Menu-Ul{
+    display: none;
+}
+.nav-link{
+    width: 100%;
+}
+.Cont-ul-Head li a{
+    color: white;
+}
+.Cont-Tit-Ul-Menu{
+    display: none;
+}
+.Line-Menu-Ul{
+    width: 98%;
+}
+.sec1-index .index{
+    padding-top: 0;;
+}
+/* .index{
+    padding-top: 100px;
+} */
+
+
+.form-redes{
+    display: none !important;
+}
+.ContTel p{
+    display: none;
+}
+.menuIndex ul{
+    display: none;
+}
+}
+@media only screen and (max-width: 1135px) {
+	.seccion1Vacantes{
+		padding-top: 100px;
+	}
+
+	
+
+    .contentIni1{
+        width: 100%;
+        height: 100%;
+    }
+    .contentIniP{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .divguardias{
+        margin: 0px;
+        padding-top: 300px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .divguardias img{
+        width: 400px;
+    }
+    .divtextguardias{
+        margin: 0px;
+        margin-top: 350px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .divtextguardias P{
+        text-align: center;
+        text-align: justify;
+    }
+    .barraR{
+        width: 90%;
+        margin: 5%;
+    }
+    .headerIni{
+        position: fixed;
+        width: 100%;
+        background: white;
+        z-index: 1100;
+    }
+
+    .btn-Menu-Icon{
+        display: block;
+        border: none;
+        background: none;
+    }
+    .iconmenu{
+        display: block;
+    }
+
+
+    .headerIni .menuIndex .Ul-Cont-Father{
+        right: 100%;
+        padding: 0;
+        margin-left: -10px;
+        margin-top: 84px;
+        width: 100%;
+        position: absolute;
+        background: rgba(84, 84, 84, 0.985);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1000;
+    }
+    .Li-Cont-Menu{
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+		text-align: center;
+    }
+    .Cont-father-Menu{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+    .Cont-Li-F-A{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white !important;
+    }
+    
+
+
+    /* parte de servicios */
+    /* .seccionIzqServicios{
+        position: relative;
+        height: 1300px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 300px;
+    }
+    .ContseccionIzqServicios{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .ContseccionIzqServicios1{
+        width: 300px;
+        height: 300px;
+    }
+    .ContseccionIzqServicios1 img{
+        width: 300px;
+        height: 300px;
+    }
+    .cuadroServicios{
+        margin: 0;
+        padding: 0;
+        position: relative;
+        margin-top: 100px;
+        width: 80%;
+    } */
+
+
+    /* .seccion1Servicios{
+        display: flex;
+        height: 700px;
+        justify-content: center;
+        background: #f7f7f7; 
+    } */
+    /* .seccionIzqServicios{
+        width: 100%;
+        height: 97%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 200px;
+
+    } */
+    /* .cuadroServicios{
+        position: relative;
+        margin: 0;
+        width: 80%;
+        max-width: 43.75em;
+        min-width: 350px;
+        height: 37.5em;
+        margin-top: 20px;
+        background: #f7f7f7;
+        border-radius: 40px;
+        box-shadow: 3px 3px 20px 15px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+    .ContseccionIzqServicios{
+        width: 100%;
+        margin: 200px;
+    }
+    .ContseccionIzqServicios img{
+        width: 100%;
+        height: 100%;
+
+    }
+	.ContseccionIzqServicios{
+		margin-top: 300px;
+		margin-bottom: 0px;
+	}
+	.cuadroServicios{
+		margin-top: 100px;
+	}
+	.divBtnCuadro a{
+		text-decoration: none;
+	   }
+	.divBtnCuadro button{
+		margin-top: 5px;
+		margin-bottom: 5px;
+		width: 150px;
+		height: 35px;
+		background: red;
+		border: none;
+		font-weight: bold;
+		border-radius: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	   }
+
+
+    .CuadroOtro{
+        padding-top: 100px;
+        padding-bottom: 0;
+        display: block;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cuadroServicios2{
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 40%;
+        max-width: 43.75em;
+        min-width: 98%;
+        height: 37.5em;
+        background: #ffffff;
+        border-radius: 40px;
+        box-shadow: 3px 3px 20px 15px rgba(0, 0, 0, 0.1);
+    }
+    .seccion2Service{
+        margin-top: 700px;
+    } */
+
+/*     
+    .ContTextCuadroServ{
+        width: 100%;
+        padding-top: 30px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .ContTextCuadroServ h1{
+        width: 80%;
+    }
+    .LineRserviceC{
+        margin-top: -20px;
+        width: 250px;
+        height: 7px;
+        background: red;
+        border-radius: 20px;
+    }
+    .text-service-cont{
+     width: 100%;
+     height: 75%;
+     display: flex;
+     align-items: center;
+     justify-content: center;  
+     text-align: justify; 
+    }
+    .text-service-cont p{
+        margin-top: 80px;
+        width: 85%;
+        height: 75%;
+       }
+    
+       .divBtnCuadro{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+       }
+       .divBtnCuadro button{
+        position: relative;
+        width: 150px;
+        background: red;
+        border: none;
+        font-weight: bold;
+        border-radius: 30px;
+       }
+    .seccion3-service .formSec3_2{
+        width: 85%;
+    } */
+
+    /* <!-- parte de Mision, Vision, Valores y Certificacion --> */
+    .content2iniFlex{
+        width: 100%;
+
+    }
+
+    .tarjetasInfo{
+        width: 50%;
+        margin: 30PX;
+        padding: 20px;
+    
+    }
+    /* <!-- parte de Mision, Vision, Valores y Certificacion --> */
+
+    /* <!-- contenido de cartas circulares con fondo de imagen  --> */
+    .contentIni3{
+        width: 100%;
+        height: 500px;
+        background-image: url(../img/design/fondo.png);
+        background-size: 150%;
+        
+    }
+    .contentCarts3{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .Carts3{
+        margin: 15px;
+        padding: 0px;
+        text-align: center;
+
+    }
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                                        /* 800px */
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media only screen and (max-width: 987px) {
+    .Kgrandesec3{
+        display: none;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .cont-div-spacing{
+        height: 900px;
+    }
+    .ContseccionIzqServicios1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+        width: 500px;
+        border-radius: 50px;
+    }
+    .cont-img-poli{
+        margin-top: 0px;
+    }
+    .cont-blanco-serv{
+        margin-top: 50px;
+    }
+}
+@media only screen and (max-width: 800px) {
+
+    /* pagina de inicio */
+
+    .seccionIzqIndex{
+        width: 100%;
+
+    }
+
+    .Kgrandesec3 img{
+        width: 250px;
+        position: absolute;
+        margin-top: 100px;
+        margin-left: 2%;
+        z-index: 500;
+    
+    }
+
+    /* pagina de inicio */
+
+
+    .divguardias img{
+        width: 300px;
+    }
+
+
+    .seccion3-service .formSec3_2{
+        width: 85%;
+    }
+
+        /* <!-- parte de Mision, Vision, Valores y Certificacion --> */
+        .content2iniFlex{
+            margin-top: 200px;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+    
+        }
+    
+        .tarjetasInfo{
+            width: 60%;
+            margin: 50PX;
+        
+        }
+        .contentIni2_2{
+            margin-top: 280px;
+        }
+        /* <!-- parte de Mision, Vision, Valores y Certificacion --> */
+        .contentIni3{
+            width: 100%;
+            height: 100%;
+            background: b;
+            /* background-image: url(../img/fondo.png); */
+            background-size: 0%;
+            background-repeat: no-repeat;
+        }
+
+        .contentCarts3{
+            padding-top: 100px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Carts3{
+            margin-top: 50px;
+            padding: 0px;
+            text-align: center;
+            border: 3px solid rgb(137, 137, 137);
+            border-radius: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+    
+        }
+        
+        .Carts3 img{
+            background: rgb(255, 255, 255);
+            border-radius: 100%;
+            border: 1px solid rgb(255, 0, 0);
+
+        }
+        .Carts3 h1{
+            position: relative;
+            color: black;
+            z-index: 5px;
+        }
+        .barraRT3{
+            width: 50%;
+            height: 6px;
+            border-radius: 10px;
+            background: rgb(255, 0, 0);
+        }
+
+
+
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+                                        /* 541px */
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+@media only screen and (max-width: 541px) {
+    .cartasec1{
+        width: 95%;
+    }
+
+	.ContTextCuadroServ h1{
+		font-size: 25px;
+		margin-bottom: 30px;
+	}
+    .ContseccionIzqServicios1{
+        width: 300px;
+    }
+
+    .seccion3-service .formSec3_2{
+        width: 98%;
+    }
+
+    .Kgrandesec3 img{
+    display: none;
+    
+    }
+    .seccionIzqIndex{
+        background: rgba(0, 0, 0, 0.796);
+    }
+    .formSec3_2{
+        width: 100%;
+    }
+    .CT1Context{
+        width: 85%;
+        margin-top: 10px;
+        margin-left: 0px;
+        text-align: justify;
+        font-size: 14px;
+		display: flex;
+    }
+	.CT1Context div{
+		width: 95%;
+		margin-top: 0px;
+		margin-bottom: 10px;
+		max-height: 180px;
+		overflow-y: scroll;
+		scroll-behavior: auto;
+    }
+
+    .ContCardsSeccion2{
+        position: relative;
+        /* width: 65%; */
+        height: 100%;
+        display: flex;  
+    }
+    .cadrSec2{
+        width: 100%;
+        margin: 10px;
+        margin-bottom: 50px;    
+        height: 100%;
+        background: #ffffff;
+    }
+
+    .tarjetasInfo{
+        margin: 20px;
+        width: 90%;
+        border: 3px solid rgb(137, 137, 137);
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+    .CT1TxtDesc{
+        font-size: 14px;
+    }
+    .footermenu ul{
+        margin: 0px;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+
+    }
+    .footermenu ul li a{
+        margin: 4px;
+       font-size: 12px;
+    }
+
+    .contentIni2_2 h1{
+        font-size: 35px;
+    }
+    .contentIni2_2 p{
+        margin-top: 0px;
+        font-size: 12px;
+    }
+    /* .cards4{
+        width: 100%;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cards4 img{
+        width: 200px;
+    } */
+
+    .RedesFooter{
+        margin-right: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .img-slik{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
