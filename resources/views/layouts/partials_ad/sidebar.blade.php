@@ -78,6 +78,12 @@
 					<li>
 						<a href="{{ route('config.seccion.show', ['slug' => 'contact']) }}" class="mx-3 my-1 collapsible-header waves-effect {{ (request()->is('admin/config/secciones/contact')) ? 'active' : '' }}" style="border-radius: 16px;"><i class="fas fa-mail-bulk"></i> Contacto </a>
 					</li> 
+					<li>
+						<a href="{{ route('config.seccion.show', ['slug' => 'carts']) }}" class="mx-3 my-1 collapsible-header waves-effect {{ (request()->is('admin/config/secciones/carts')) ? 'active' : '' }}" style="border-radius: 16px;"><i class="fas fa-cart"></i> Compras </a>
+					</li> 
+					<li>
+						<a href="{{ route('config.seccion.show', ['slug' => 'users']) }}" class="mx-3 my-1 collapsible-header waves-effect {{ (request()->is('admin/config/secciones/users')) ? 'active' : '' }}" style="border-radius: 16px;"><i class="fas fa-user"></i> Usuarios </a>
+					</li> 
 					{{-- <li>
 						<a href="{{ route('config.seccion.show', ['slug' => 'contact']) }}" class="mx-3 my-1 collapsible-header waves-effect {{ (request()->is('admin/config*')) ? 'active' : '' }}" style="border-radius: 16px;"><i class="fas fa-paper-plane"></i> Contacto </a>
 					</li> --}}

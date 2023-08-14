@@ -129,6 +129,10 @@ Route::prefix('admin')->group(function(){
 			Route::delete('/delProductoSide/{producto}','SeccionController@delProductoSide')->name('delProductoSide');
 			
 			Route::get('/usersList','SeccionController@usersList')->name('usersList');
+			Route::get('/usuario_detalle/{usuario}','SeccionController@usuario_detalle')->name('usuario_detalle');
+			Route::get('/lista_usuarios','SeccionController@lista_usuarios')->name('lista_usuarios');
+			Route::put('/check/{order}', 'SeccionController@checkUpdate')->name('check');
+
 
 			Route::get('/galeriaSide/{producto}','SeccionController@galeriaSide')->name('galeriaSide');
 			Route::post('/addGaleriaSide','SeccionController@addGaleriaSide')->name('addGaleriaSide');

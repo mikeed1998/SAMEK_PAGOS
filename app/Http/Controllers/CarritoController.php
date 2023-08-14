@@ -253,6 +253,7 @@ class CarritoController extends Controller
             $order->address = Auth::user()->address;
             $order->name =  Auth::user()->name;
             $order->payment_id = $customer->id;
+            $order->entregado = 0;
 
             Auth::user()->orders()->save($order);
         } catch (\Conekta\ProcessingError $error){

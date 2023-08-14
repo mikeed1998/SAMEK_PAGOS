@@ -521,12 +521,31 @@ class SeccionController extends Controller
 		return redirect()->back();
     }
 
-    // public function usersList() {
-    //     $usuarios = User::all();
-    //     $ordenes = SOrder::all();
+    public function usersList() {
+        $ordenes = SOrder::all();
 
-    //     return view('configs.secciones.users', compact('usuarios', 'ordenes'));
-    // }
+        return view('configs.secciones.users', compact('usuarios', 'ordenes'));
+    }
+
+    public function usuario_detalle($usuario) {
+        $usuario = User::find($usuario);
+
+        return view('configs.secciones.usuarios', compact('usuario'));
+    }
+
+    public function lista_usuarios() {
+        $usuarios = User::all();
+
+        return view('configs.secciones.lista-usuarios', compact('usuarios'));
+    }
+
+    public function checkUpdate(Request $request, $order)
+    {
+        $order = SOrder::find($order);
+        $order->entregado = $request->estado;
+        $order->update();
+        return redirect()->back();
+    }
 
     /**
      * Remove the specified resource from storage.

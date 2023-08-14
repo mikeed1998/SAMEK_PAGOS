@@ -106,7 +106,7 @@
                     <h2 class="fs-1 text-center">Historial de compras</h2>
         
                     <div class="row">
-                        @foreach ($orders as $order)
+                        @foreach ($orders as $order) 
                             <div class="row mt-5">
                                 <div class="col-8 fs-5 fw-bolder border">
                                     Producto

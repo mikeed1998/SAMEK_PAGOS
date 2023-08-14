@@ -1,6 +1,10 @@
 @extends('layouts.admin')
 
 @section('cssExtras')
+<link href="https://cdn.datatables.net/v/bs5/dt-1.13.6/datatables.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<script src="https://cdn.datatables.net/v/bs5/dt-1.13.6/datatables.min.js"></script>
+
     <style>      
         @media(min-width: 1800px) {
 
@@ -56,67 +60,41 @@
 		<a href="{{ route('config.index') }}" class="col col-md-2 btn btn-sm grey darken-2 text-white mr-auto"><i class="fa fa-reply"></i> Regresar</a>
 	</div>
 
-    <div class="container-fluid">
+
+    <div class="container-fluid py-5 mt-5 mb-5">
         <div class="row">
-            <div class="col">
-                <div class="accordion" id="accordionExample">
-                    @foreach ($usuarios as $usu)
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" style="box-shadow: none;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne-{{ $usu->id }}" aria-expanded="true" aria-controls="collapseOne-{{ $usu->id }}">
-                                {{ $usu->name }} {{ $usu->lastname }} | {{ $usu->username }}
-                            </button>
-                        </h2>
-                        <div id="collapseOne-{{ $usu->id }}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <div class="row">
-                                    @foreach ($ordenes as $order)
-                                        <div class="row mt-5">
-                                            <div class="col-8 fs-5 fw-bolder border">
-                                                Producto
-                                            </div>
-                                            <div class="col-2 text-center fs-5 fw-bolder border">
-                                                Unidades
-                                            </div>
-                                            <div class="col-2 fs-5 fw-bolder border">
-                                                Total individual
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                        @foreach ($order->cart->items as $item)
-                                            <div class="col-8 fs-5 fw-normal border">
-                                                {{ $item['item']['nombre'] }}
-                                            </div>
-                                            <div class="col-2 text-center fs-5 fw-normal border">
-                                                {{ $item['qty'] }}
-                                            </div>
-                                            <div class="col-2 fs-5 fw-normal border">
-                                                ${{ $item['price'] }}
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                        <div class="col-12 text-start fs-4 fw-bolder">
-                                            Total pagado: ${{ $order->cart->totalPrice }}
-                                        </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
-                    
-                       
-                </div>
+            <div class="col py-5 display-5 text-center">
+                Lista de usuarios
             </div>
         </div>
-   </div>
+        <div class="row">
+            <div class="col-6 border bg-white mx-auto" style="border-radius: 16px;">
+                <ul class="list-group border-0">
+                    @foreach ($usuarios as $usu)
+                        <li class="list-group-item border-0">
+                            <div class="row border-0 border-bottom">
+                                <div class="col-6 fs-5">
+                                    {{ $usu->name . " ". $usu->lastname }}
+                                </div>
+                                <div class="col-6">
+                                    <a class="btn btn-sm" href="{{ route('config.seccion.usuario_detalle', ['usuario' => $usu->id]) }}"><i class="fa fa-user"></i>Ver detalle</a>
+                                </div>
+                            </div>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    </div>
 
 
 
 @endsection
 
 @section('jsLibExtras2')
+   
 
+    
 @endsection
 
 @section('jqueryExtra')
