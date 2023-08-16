@@ -28,7 +28,7 @@
 		<ul class="custom-scrollbar" >
 			<li class="logo-sn waves-effect py-3">
 				<div class="text-center" >
-					<a href="{{ url('admin') }}" class="pl-0">
+					<a href="{{ route('config.index') }}" class="pl-0">
 						<img class="img-fluid" style="width: 200px;" src="{{asset('img/design/logo_woz.png')}}">
 						 {{-- <div class="card mx-3 text-center d-flex justify-content-center align-items-centers" style="border-radius: 16px; height: 50px;" >
 							<div><img class="" style="width: 130px; " src="{{asset('img/design/logo_woz.png')}}"></div>
