@@ -143,7 +143,7 @@
 									</div>
 									<div class="row">
 										<div class="col-12 text-end">
-											<a href="#/">
+											<a href="#/" type="button">
 												<img src="{{ asset('img/design/mision.png') }}" alt="" class="img-fluid">
 											</a>
 										</div>

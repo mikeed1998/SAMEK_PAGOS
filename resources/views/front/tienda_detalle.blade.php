@@ -297,12 +297,12 @@
                 <div class="row py-3">
                     <div class="col display-5 fw-normal text-dark">
                         <div class="row py-3">
-                            <div class="col-xxl-5 col-xl-6 col-lg-5 col-md-5 col-sm-5 col-xs-5 col-5 mt-2">
+                            {{-- <div class="col-xxl-5 col-xl-6 col-lg-5 col-md-5 col-sm-5 col-xs-5 col-5 mt-2">
                                 Cantidad: 
                             </div>
                             <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 col-4 mt-xxl-2 mt-xl-2 mt-lg-2 mt-md-1 mt-sm-1 mt-xs-1 mt-0 display-5">
                                 <input type="number" class="form-control" style="font-size: 32px;">
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="row py-3">
                             <div class="col display-5 fw-normal">
