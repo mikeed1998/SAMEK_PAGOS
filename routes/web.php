@@ -133,7 +133,6 @@ Route::prefix('admin')->group(function(){
 			Route::get('/lista_usuarios','SeccionController@lista_usuarios')->name('lista_usuarios');
 			Route::put('/check/{order}', 'SeccionController@checkUpdate')->name('check');
 
-
 			Route::get('/galeriaSide/{producto}','SeccionController@galeriaSide')->name('galeriaSide');
 			Route::post('/addGaleriaSide','SeccionController@addGaleriaSide')->name('addGaleriaSide');
 			Route::delete('/delGaleriaSide/{galeria}','SeccionController@delGaleriaSide')->name('delGaleriaSide');
@@ -346,3 +345,7 @@ Route::post('checkoutStripe', 'CarritoController@postCheckoutStripe')->name('che
 
 Route::get('getcheckoutConekta', 'CarritoController@getCheckoutConekta')->name('getcheckoutConekta')->middleware('auth');
 Route::post('postcheckoutConekta', 'CarritoController@postCheckoutConekta')->name('postcheckoutConekta')->middleware('auth');
+Route::get('paysuccess', 'CarritoController@paySuccess')->name('paysuccess')->middleware('auth');
+Route::get('payerror/{msg?}', 'CarritoController@payError')->name('payerror')->middleware('auth');
+
+

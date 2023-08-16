@@ -8,13 +8,86 @@
 
 @section('content')
 @if (Session::has('cart'))
-<div class="row mt-5 mb-5">
+{{-- <div class="row mt-5 mb-5">
     <div class="col fs-1 text-center">
         Mi carrrito de compras
     </div>
-</div>
+</div> --}}
 
 
+<section class="py-5" style="background-color: #eee;">
+    <div class="container py-0">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-10">
+  
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="fw-normal mb-0 text-black">Mis productos en carrito</h3>
+            <div>
+              
+            </div>
+          </div>
+  
+          
+  @foreach ($products as $prod)
+  <div class="card rounded-3 mb-3">
+    <div class="card-body p-4">
+      <div class="row d-flex justify-content-between align-items-center">
+        <div class="col-md-2 col-lg-2 col-xl-2">
+          <img
+            src="{{ asset('img2/photos/productos/'.$prod['item']['imagen']) }}"
+            class="img-fluid rounded-3" alt="Cotton T-shirt">
+        </div>
+        <div class="col-md-4 col-lg-4 col-xl-4">
+          <p class="lead fw-normal mb-2">
+                {{ $prod['item']['nombre'] }}
+          </p>
+          <p>
+            Cantidad: {{ $prod['qty'] }}
+          </p>
+        </div>
+        <div class="col-md-1 col-lg-1 col-xl-1 offset-lg-1">
+            <h5 class="mb-0">$499.00</h5>
+          </div>
+        <div class="col-md-3 col-lg-3 col-xl-3 d-flex">
+          <div class="row">
+            <div class="col-12 py-1">
+                <a href="{{ route('reduceByOne', ['id' => $prod['item']['id']]) }}" class="btn btn-sm w-100 bg-dark text-white">Quitar uno</a>
+            </div>
+            <div class="col-12 py-1">
+                <a href="{{ route('remove', ['id' => $prod['item']['id']]) }}" class="btn btn-sm w-100 bg-danger text-white">Quitar todos</a>
+            </div>
+          </div>
+        </div>
+        
+       
+      </div>
+    </div>
+  </div>
+  @endforeach
+        
+          
+        
+  
+          <div class="card mt-1 mb-1">
+            <div class="card-body">
+                <strong>Total de todos los productos: {{ $totalPrice }}</strong>
+            </div>
+          </div>
+
+          <div class="card mt-3">
+            <div class="card-body">
+                <a href="{{ route('getcheckoutConekta') }}" type="button" class="btn btn-success fs-5 fw-bolder" style="text-decoration: none;">
+                    Proceder al pago
+                </a>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+
+{{-- 
 <div class="row">
     <div class="col-sm-9 col-md-9 mx-auto col-md-offset-3 col-sm-offset-3">
 
@@ -34,6 +107,7 @@
         </div>
         <div class="row fs-5">
             @foreach ($products as $product)
+             
                 <div class="col-1 border">
                     {{ $product['qty'] }}
                 </div>
@@ -44,40 +118,24 @@
                     {{ $product['price'] }}
                 </div>
                 <div class="col-3 border">
-                    <a href="{{ route('reduceByOne', ['id' => $product['item']['id']]) }}" class="btn btn-small bg-dark fs-5 text-white">Quitar uno</a>
-                    <a href="{{ route('remove', ['id' => $product['item']['id']]) }}" class="btn btn-small bg-danger fs-5 text-white">Quitar todos</a>
+                    <div class="row">
+                        <div class="col-6">
+                            <a href="{{ route('reduceByOne', ['id' => $product['item']['id']]) }}" class="btn btn-sm bg-dark text-white">Quitar uno</a>
+
+                        </div>
+                        <div class="col-6">
+                            <a href="{{ route('remove', ['id' => $product['item']['id']]) }}" class="btn btn-sm bg-danger text-white">Quitar todos</a>
+
+                        </div>
+                    </div>
                 </div>
             @endforeach
         </div>
 
-        {{-- <ul class="list-group">
-            @foreach ($products as $product)
-                <li class="list-group-item">
-                    <span class="badge bg-secondary text-white">{{ $product['qty'] }}</span>
-                    <strong>{{ $product['item']['nombre'] }}</strong>
-                    <span class="badge bg-success text-white">
-                        {{ $product['price'] }}
-                    </span>
-                    <div class="btn-group">
-                        <button type="button" class="button btn btn-primary btn-xs dropdown-toggle" data-bs-toggle="dropdown">
-                            Action <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="{{ route('product.reduceByOne', ['id' => $product['item']['id']]) }}" class="dropdown-item">Reduce by 1</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('product.remove', ['id' => $product['item']['id']]) }}" class="dropdown-item">Reduce All</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            @endforeach
-        </ul> --}}
     </div>
 </div>
-
-
+ --}}
+{{-- 
 <div class="row">
     <div class="col-sm-9 col-md-9 mx-auto col-md-offset-3 col-sm-offset-3 fs-4">
         <strong>Total de todos los productos: {{ $totalPrice }}</strong>
@@ -89,7 +147,7 @@
             Proceder al pago
         </a>
     </div>
-</div>
+</div> --}}
 @else
 <div class="row">
     <div class="col-sm-12 mt-5 mb-5 py-5 col-md-12 col-md-offset-3 col-sm-offset-3 fs-5 text-center">

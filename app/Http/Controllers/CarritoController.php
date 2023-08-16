@@ -12,6 +12,7 @@ use Auth;
 use Stripe\Charge;
 use Stripe\Stripe;
 use App\SOrder;
+use App\Total;
 
 class CarritoController extends Controller
 {
@@ -62,6 +63,14 @@ class CarritoController extends Controller
 
         $oldCart = Session::get('cart');
         $cart = new Carrito($oldCart);
+
+       
+
+        // foreach($cart->items as $cat) {
+        //     echo $cat['price'];
+        // }
+        // foreach($cart->)
+
         return view('front.carrito.shopping-cart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'data' => $data]);
     }
 
@@ -194,11 +203,14 @@ class CarritoController extends Controller
                 )//customer
             );
         } catch (\Conekta\ProccessingError $error){
-            echo $error->getMesage();
+            return redirect()->route('payerror', ['msg' => $error->getMessage()]);
+            // echo $error->getMesage();
         } catch (\Conekta\ParameterValidationError $error){
-            echo $error->getMessage();
+            // echo $error->getMessage();
+            return redirect()->route('payerror', ['msg' => $error->getMessage()]);
         } catch (\Conekta\Handler $error){
-             echo $error->getMessage();
+            //  echo $error->getMessage();
+            return redirect()->route('payerror', ['msg' => $error->getMessage()]);
         }
 
         $lineItems = [];
@@ -257,11 +269,14 @@ class CarritoController extends Controller
 
             Auth::user()->orders()->save($order);
         } catch (\Conekta\ProcessingError $error){
-            echo $error->getMessage();
+            // echo $error->getMessage();
+            return route('payerror', ['msg' => $error->getMessage()]);
         } catch (\Conekta\ParameterValidationError $error){
-            echo $error->getMessage();
+            // echo $error->getMessage();
+            return route('payerror', ['msg' => $error->getMessage()]);
         } catch (\Conekta\Handler $error){
-            echo $error->getMessage();
+            // echo $error->getMessage();
+            return route('payerror', ['msg' => $error->getMessage()]);
         }
 
         // echo "ID: ". $order->id;
@@ -292,6 +307,15 @@ class CarritoController extends Controller
 
         
         Session::forget('cart');
-        return redirect()->route('user.profile')->with('success', 'Successfully purchased products!');
+        // return redirect()->route('user.profile')->with('success', 'Successfully purchased products!');
+        return redirect()->route('paysuccess');
+    }
+
+    public function paySuccess() {
+        return view('front.carrito.paysuccess');
+    }
+
+    public function payError($msg = '') {
+        return view('front.carrito.payerror', compact('msg'));
     }
 }

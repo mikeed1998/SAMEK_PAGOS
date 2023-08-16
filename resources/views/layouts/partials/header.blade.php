@@ -146,7 +146,18 @@
 		<div class="col fs-3 fw-normal mt-4 text-success text-start">
 			<ul class="row" style="list-style-type: none; padding-left: 0;">
 				<li class="dropdown col-6" style="list-style-type: none; padding-left: 0;">
+					@if (Auth::check())
+					<a href="#" class="dropdown-toggle fs-3 fw-normal" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="text-decoration: none; color: #00AD61;">
+						@if (Auth::user()->username != '')
+							{{ Auth::user()->username}}
+						@else
+							{{ Auth::user()->name}}
+						@endif
+					</a>
+					@else
 					<a href="#" class="dropdown-toggle fs-3 fw-normal" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="text-decoration: none; color: #00AD61;">USUARIO</a>
+
+					@endif
 					@if (Auth::check())
 					<ul class="dropdown-menu" style="list-style-type: none; padding-left: 0;">
 						<li class="dropdown-item fs-4"><a href="{{ route('user.profile') }}" style="text-decoration: none; color: #00AD61;">Perfil</a></li>
@@ -230,7 +241,18 @@
 					<div class="col fs-3 fw-normal mt-4 text-success text-end">
 						<ul class="row" style="list-style-type: none; padding-left: 0;">
 							<li class="dropdown col-6" style="list-style-type: none; padding-left: 0;">
-								<a href="#" class="dropdown-toggle fs-3 fw-normal" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="text-decoration: none; color: #00AD61;">USUARIO</a>
+								{{-- <a href="#" class="dropdown-toggle fs-3 fw-normal" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="text-decoration: none; color: #00AD61;">USUARIO</a> --}}
+								@if (Auth::check())
+									<a href="#" class="dropdown-toggle fs-3 fw-normal" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="text-decoration: none; color: #00AD61;">
+										@if (Auth::user()->username != '')
+											{{ Auth::user()->username}}
+										@else
+											{{ Auth::user()->name}}
+										@endif
+									</a>
+								@else
+									<a href="#" class="dropdown-toggle fs-3 fw-normal" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="text-decoration: none; color: #00AD61;">USUARIO</a>
+								@endif
 								@if (Auth::check())
 								<ul class="dropdown-menu" style="list-style-type: none; padding-left: 0;">
 									<li class="dropdown-item fs-4"><a href="{{ route('user.profile') }}" style="text-decoration: none; color: #00AD61;">Perfil</a></li>

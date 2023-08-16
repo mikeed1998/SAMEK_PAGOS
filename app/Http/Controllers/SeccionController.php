@@ -536,7 +536,7 @@ class SeccionController extends Controller
     public function lista_usuarios() {
         $usuarios = User::all();
 
-        return view('configs.secciones.lista-usuarios', compact('usuarios'));
+        return view('configs.secciones.users', compact('usuarios'));
     }
 
     public function checkUpdate(Request $request, $order)
