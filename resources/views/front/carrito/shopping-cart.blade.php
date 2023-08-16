@@ -46,7 +46,7 @@
           </p>
         </div>
         <div class="col-md-1 col-lg-1 col-xl-1 offset-lg-1">
-            <h5 class="mb-0">$499.00</h5>
+            <h5 class="mb-0">{{ $prod['price'] }}</h5>
           </div>
         <div class="col-md-3 col-lg-3 col-xl-3 d-flex">
           <div class="row">
