@@ -313,14 +313,14 @@
                 </div>
                 <div class="row py-1">
                     <div class="col py-2">
-                        <a href="{{ route('addToCart', ['id' => $producto->id]) }}" class="btn btn-outline fs-3 text-white px-5" style="background-color: #00AD61; border-radius: 26px;">
+                        <a href="{{ route('addToCart', ['id' => $producto->id, 'pag' => 'detalle']) }}" class="btn btn-outline fs-3 text-white px-5" style="background-color: #00AD61; border-radius: 26px;">
                             A&Ntilde;ADIR <span uk-icon="icon: cart; ratio: 1.6;"></span>
                         </a>
                     </div>
                 </div>
                 <div class="row py-1">
                     <div class="col py-2">
-                        <a href="#/" class="btn btn-outline fs-3 text-white px-5" style="background-color: #1B44DD; border-radius: 26px;">
+                        <a href="{{ route('shoppingCart') }}" class="btn btn-outline fs-3 text-white px-5" style="background-color: #1B44DD; border-radius: 26px;">
                             COMPRAR
                         </a>
                     </div>

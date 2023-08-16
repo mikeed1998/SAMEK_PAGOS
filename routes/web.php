@@ -334,7 +334,7 @@ Route::get('/perfil', 'UserController@getProfile')->name('user.profile')->middle
 Route::get('/logout', 'UserController@getLogout')->name('user.logout')->middleware('auth');
 
 // CARRITO DE COMPRAS
-Route::get('/add-to-cart/{id}', 'CarritoController@getAddToCart')->name('addToCart')->middleware('auth');
+Route::get('/add-to-cart/{id}/{pag?}', 'CarritoController@getAddToCart')->name('addToCart')->middleware('auth');
 Route::get('/shopping-cart', 'CarritoController@getCart')->name('shoppingCart')->middleware('auth');
 Route::get('/reduce/{id}', 'CarritoController@getReduceByOne')->name('reduceByOne')->middleware('auth');
 Route::get('/remove/{id}', 'CarritoController@getRemoveItem')->name('remove')->middleware('auth');

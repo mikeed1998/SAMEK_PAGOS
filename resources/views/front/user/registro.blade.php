@@ -121,7 +121,7 @@
 							<p id="msj_error" class="mb-0 mt-1" style="color:red; display:none;">Contraseña bastante corta</p>
 							</div>
 							<div class="col-12 col-md-10 col-lg-7 mb-3">
-							<input type="password" class="form-control" id="password_verify" placeholder="Confirma contraseña" name="password_confirmation" style="border-radius:10px;" required autocomplete="new-password" disabled>
+							<input type="password" class="form-control" id="password_verify" placeholder="Confirma contraseña" name="password_confirmation" style="border-radius:10px;" required autocomplete="new-password">
 							<p id="msj_error2" class="mb-0 mt-1" style="color:red; display:none;">La contraseña no coincide</p>
 							</div>
 							<div class="col-12 col-md-10 col-lg-7 mb-3 d-flex justify-content-center align-items-center flex-column">

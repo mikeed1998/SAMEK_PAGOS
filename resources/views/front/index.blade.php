@@ -330,6 +330,11 @@
 
 	}
 </style>
+<style>
+	.slick-slider .slick-slide {
+    margin-right: 20px;
+}
+</style>
 @endsection
 
 @section('content')
@@ -386,7 +391,7 @@
 		<div class="col-11 mx-auto">
 			<div class="row">
 				
-				<div class="soluciones">
+				<div class="soluciones slick-slider">
 					@foreach ($soluciones as $sol)
 					@if($sol->inicio == 1)
 					<div class="col-xxl-4 col-xl-4 col-lg-6 col-md-11 col-sm-11 col-xs-11 col-11 mx-auto py-5">
@@ -409,7 +414,8 @@
 											</div>
 										</div>
 										<div class="row mt-2">
-											<div class="col-12 text-end">
+											<div class="col-9"></div>
+											<div class="col-3 text-end">
 												<a href="{{ route('front.soluciones') }}">
 													<img src="{{ asset('img/design/mision.png') }}" alt="" class="img-fluid">
 												</a>
@@ -480,7 +486,7 @@
 											<div class="card-body py-5 d-flex align-items-center justify-content-center">
 												<div class="row mt-5">
 													<div class="col mt-5 d-flex align-items-center justify-content-center">
-														<a href="{{ route('addToCart', ['id' => $prod->id]) }}">
+														<a href="{{ route('addToCart', ['id' => $prod->id, 'pag' => 'inicio']) }}">
 															<img src="{{ asset('img/design/carrito2.png') }}" alt="" class="px-3">
 														</a>
 														<a href="{{ route('front.tienda_detalle', ['producto' => $prod->id]) }}">

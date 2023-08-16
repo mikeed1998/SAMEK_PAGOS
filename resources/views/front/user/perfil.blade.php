@@ -34,7 +34,7 @@
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
             <div class="row">
-                <div class="col-12 fs-1 text-center">
+                <div class="col-12 fs-1 mt-5 text-center">
                     Mi perfil
                 </div>
                 <div class="col-9 mx-auto ">
@@ -102,40 +102,55 @@
         </div>
         <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
             <div class="row">
-                <div class="col-md-9 mx-auto col-md-offset-4">
-                    <h2 class="fs-1 text-center">Historial de compras</h2>
+                <div class="col-md-9 mx-auto col-md-offset-4" >
+                    <h2 class="fs-1 mt-5 text-center">Historial de compras</h2>
         
                     <div class="row">
                         @foreach ($orders as $order) 
-                            <div class="row mt-5">
-                                <div class="col-8 fs-5 fw-bolder border">
-                                    Producto
+
+                        
+                            <div class="col-12 border shadow mb-5 p-5" style="border-radius: 36px">
+                                <div class="row mt-5">
+                                    <div class="col-8 fs-5 fw-bolder ">
+                                        Producto
+                                    </div>
+                                    <div class="col-2 text-center fs-5 fw-bolder ">
+                                        Unidades
+                                    </div>
+                                    <div class="col-2 fs-5 fw-bolder ">
+                                        Total individual
+                                    </div>
                                 </div>
-                                <div class="col-2 text-center fs-5 fw-bolder border">
-                                    Unidades
+                                <div class="row">
+                                    <hr class="border-bottom border-dark border-4">
+
+                                @foreach ($order->cart->items as $item)
+                                    <div class="col-8 fs-5 fw-normal ">
+                                        <div class="row">
+                                            <div class="col-3 text-center">
+                                                <img src="{{ asset('img2/photos/productos/'.$item['item']['imagen']) }}" alt="" class="img-fluid w-100">
+                                            </div>
+                                            <div class="col-9 mt-4">
+                                                {{ $item['item']['nombre'] }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2 text-center fs-5 fw-normal mt-4">
+                                        {{ $item['qty'] }}
+                                    </div>
+                                    <div class="col-2 fs-5 fw-normal mt-4">
+                                        ${{ $item['price'] }}
+                                    </div>
+                                @endforeach
+                                <hr class="border-bottom border-dark border-4">
+
                                 </div>
-                                <div class="col-2 fs-5 fw-bolder border">
-                                    Total individual
+                                <div class="col-12 text-start fs-4 fw-bolder">
+                                    <p class="m-0 fs-4 py-2"> Total pagado: ${{ $order->cart->totalPrice }} </p>
+                                    <small>Fecha de la compra: {{ $order->created_at->format('d/m/Y') }}</small>
                                 </div>
                             </div>
-                            <div class="row">
-                            @foreach ($order->cart->items as $item)
-                                <div class="col-8 fs-5 fw-normal border">
-                                    {{ $item['item']['nombre'] }}
-                                </div>
-                                <div class="col-2 text-center fs-5 fw-normal border">
-                                    {{ $item['qty'] }}
-                                </div>
-                                <div class="col-2 fs-5 fw-normal border">
-                                    ${{ $item['price'] }}
-                                </div>
-                            @endforeach
-                        </div>
-                            <div class="col-12 text-start fs-4 fw-bolder">
-                                <p class="m-0 fs-4 py-2"> Total pagado: ${{ $order->cart->totalPrice }} </p>
-                                <small>Fecha de la compra: {{ $order->created_at->format('d/m/Y') }}</small>
-                            </div>
-                            <hr class="border-bottom border-dark border-4">
+                    
                         @endforeach
                     </div>
                     
@@ -147,11 +162,21 @@
     
 
     
-    <hr class="border-bottom border-dark border-4">
     
 </div>
 @endsection
 
 @section('jsLibExtras2')
 <script src="{{ asset('js/modules/admin.js') }}"></script>
+
+<script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myList li").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
 @endsection

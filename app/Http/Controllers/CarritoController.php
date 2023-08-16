@@ -16,7 +16,7 @@ use App\Total;
 
 class CarritoController extends Controller
 {
-    public function getAddToCart(Request $request, $id) {
+    public function getAddToCart(Request $request, $id, $pag = '') {
         $product = SProducto::find($id);
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
         $cart = new Carrito($oldCart);
@@ -24,7 +24,14 @@ class CarritoController extends Controller
 
         $request->session()->put('cart', $cart);
         // dd($request->session()->get('cart'));
-        return redirect()->route('front.tienda');
+
+        if($pag == 'inicio') {
+            return redirect()->route('front.index');
+        } else if($pag == 'detalle') {
+            return redirect()->route('front.tienda_detalle', ['producto' => $id]);
+        } else {
+            return redirect()->route('front.tienda');
+        }
     }
 
     public function getReduceByOne($id) {
