@@ -23,7 +23,7 @@ Route::name('front.')->group(function(){
 
 	Route::get('/', 'FrontController@index')->name('index');
 	Route::get('tienda', 'FrontController@tienda')->name('tienda');
-	Route::get('tienda_detalle/{producto}', 'FrontController@tienda_detalle')->name('tienda_detalle');
+	Route::get('tienda_detalle/{producto}/{mensaje?}', 'FrontController@tienda_detalle')->name('tienda_detalle');
 	Route::get('soluciones', 'FrontController@soluciones')->name('soluciones');
 	Route::get('nosotros', 'FrontController@aboutus')->name('aboutus');
 	Route::get('contacto', 'FrontController@contacto')->name('contacto');
@@ -335,7 +335,7 @@ Route::get('/logout', 'UserController@getLogout')->name('user.logout')->middlewa
 
 // CARRITO DE COMPRAS
 Route::get('/add-to-cart/{id}/{pag?}', 'CarritoController@getAddToCart')->name('addToCart')->middleware('auth');
-Route::get('/shopping-cart', 'CarritoController@getCart')->name('shoppingCart')->middleware('auth');
+Route::get('/shopping-cart/{mensaje?}', 'CarritoController@getCart')->name('shoppingCart')->middleware('auth');
 Route::get('/reduce/{id}', 'CarritoController@getReduceByOne')->name('reduceByOne')->middleware('auth');
 Route::get('/remove/{id}', 'CarritoController@getRemoveItem')->name('remove')->middleware('auth');
 

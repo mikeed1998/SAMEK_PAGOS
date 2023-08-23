@@ -86,13 +86,13 @@ class FrontController extends Controller
 	}
 
 
-	public function tienda_detalle(SProducto $producto) {
+	public function tienda_detalle(SProducto $producto, $mensaje = '') {
 		$data = Configuracion::first();
 		$elements = Elemento::all();
 		$productos = SProducto::all();
 		$galeria = SGaleriaProducto::where('producto', $producto->id)->get();
 
-		return view('front.tienda_detalle', compact('data', 'elements', 'producto', 'productos', 'galeria'));
+		return view('front.tienda_detalle', compact('data', 'elements', 'producto', 'productos', 'galeria', 'mensaje'));
 	}
 
 

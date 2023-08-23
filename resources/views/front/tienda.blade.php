@@ -119,11 +119,19 @@
 			</div>
 		</div>
 		<div class="col-xxl-9 col-xl-9 col-lg-8 col-md-7 col-sm-12 col-xs-12 col-12 mt-5 py-5">
+			
 			<div id="contenido">
 				<div id="items-container">
 					@foreach ($productos as $prod)
+					
+
+					
+					
+
 					<div class="col-xxl-4 col-xl-4 col-lg-6 col-md-11 col-sm-12 col-xs-12 col-12 px-3 mb-5 item categoria{{ $prod->categoria }} subcategoria{{ $prod->subcategoria }}">
+						
 						<div class="card border" style="border-radius: 16px;">
+					
 							<div class="row">
 								<div class="col-12 position-relative">
 									<div class="row">
@@ -140,20 +148,29 @@
 										width: 70%;
 									"></div>
 									<div class="col-12 position-absolute top-0 bottom-0 start-0 px-2 producto">
+										
 										<div class="card h-100" style="border-top-left-radius: 18px; border-top-right-radius: 18px;">
 											<div class="card-body py-5 d-flex align-items-center justify-content-center">
 												<div class="row mt-5">
 													<div class="col mt-5 d-flex align-items-center justify-content-center">
-														<a href="{{ route('addToCart', ['id' => $prod->id]) }}">
-															<img src="{{ asset('img/design/carrito2.png') }}" alt="" class="px-3">
-														</a>
-														<a href="{{ route('front.tienda_detalle', ['producto' => $prod->id]) }}">
-															<img src="{{ asset('img/design/view.png') }}" alt="">
-														</a>                          
+														
+														@if ($prod->stock == 0)
+															<p class="fs-3 bg-white fw-bold text-center">Sin existencias por el momento</p>
+														@else
+															<a href="{{ route('addToCart', ['id' => $prod->id]) }}">
+																<img src="{{ asset('img/design/carrito2.png') }}" alt="" class="px-3">
+															</a>
+															<a href="{{ route('front.tienda_detalle', ['producto' => $prod->id]) }}">
+																<img src="{{ asset('img/design/view.png') }}" alt="">
+															</a>       
+														@endif
+														
+														                   
 													</div>
 												</div>
 											</div>
 										</div>
+
 									</div>
 								</div>   
 							</div>     
@@ -168,7 +185,9 @@
 								</div>
 							</div>
 						</div>
+						
 					</div>
+					
 					@endforeach
 				</div>
 			</div>

@@ -7,6 +7,7 @@
 @endsection
 
 @section('content')
+@if($user->name != '' and $user->lastname != '' and $user->username != '' and $user->telefono != '')
 <div class="container mt-5 mb-5">
     <div class="row">
         <div class="col text-center display-5 fw-bolder py-3">Finalizar compra</div>
@@ -61,7 +62,7 @@
                 <span class="card-errors bg-danger text-white py-2 rounded"></span>
 	  			<div class="form-group py-2 mt-2">
     				<div class="col">
-						<input class="form-control" size="20" data-conekta="card[number]" type="text" style="border: 2px solid #4866E0; box-shadow: none;" placeholder="Numero de Tarjeta">
+						<input class="form-control" size="20" data-conekta="card[number]" type="text" style="border: 2px solid #008302; box-shadow: none;" placeholder="Numero de Tarjeta">
 					</div>
   				</div>
 				<div class="form-group py-4">
@@ -69,28 +70,28 @@
 						<div class="col-6">
 							<div class="row">
 								<div class="col-6">
-									<input size="2" maxlength="2" class="form-control" data-conekta="card[exp_month]" type="text" style="border: 2px solid #4866E0; box-shadow: none;" placeholder="Mes/exp">
+									<input size="2" maxlength="2" class="form-control" data-conekta="card[exp_month]" type="text" style="border: 2px solid #008302; box-shadow: none;" placeholder="Mes/exp">
 								
 								</div>
 								<div class="col-6">
 									
-									<input  size="4" maxlength="4" class="form-control" data-conekta="card[exp_year]" type="text" style="border: 2px solid #4866E0; box-shadow: none;" placeholder="Año/exp">
+									<input  size="4" maxlength="4" class="form-control" data-conekta="card[exp_year]" type="text" style="border: 2px solid #008302; box-shadow: none;" placeholder="Año/exp">
 								</div>
 							</div>
 						</div>
 						<div class="col-6">
-							<input class="form-control" maxlength="4" size="4" data-conekta="card[cvc]" type="text" style="border: 2px solid #4866E0; box-shadow: none;" placeholder="CVV">
+							<input class="form-control" maxlength="4" size="4" data-conekta="card[cvc]" type="text" style="border: 2px solid #008302; box-shadow: none;" placeholder="CVV">
 						</div>
 					</div>
 				</div>
 				<div class="form-group py-2">
 					<div class="col">
-						<input class="form-control" size="20" data-conekta="card[name]" type="text" style="border: 2px solid #4866E0; box-shadow: none;" placeholder="Nombre del Tarjetahambiente">
+						<input class="form-control" size="20" data-conekta="card[name]" type="text" style="border: 2px solid #008302; box-shadow: none;" placeholder="Nombre del Tarjetahambiente">
 					</div>
 				</div>
 				<div class="form-group py-2">
 					<div class="col">
-						<button class="btn w-100 fs-5" style="color: white; background-color: #4866E0;" type="submit" >Pagar</button>
+						<button class="btn w-100 fs-5" style="color: white; background-color: #008302;" type="submit" >Pagar</button>
 					</div>
 				</div>
 				<div class="form-group">
@@ -106,6 +107,15 @@
         </div>
     </div>
 </div>
+@else 
+    <div class="container bg-danger mt-5 mb-5 py-5" style="border-radius: 26px;">
+        <div class="row py-5">
+            <div class="col text-center text-white display-5 py-5">
+                No puedes completar el pago debido a que tus datos de perfil no estan completos
+            </div>
+        </div>
+    </div>
+@endif
 @endsection
 
 @section('jqueryExtra')

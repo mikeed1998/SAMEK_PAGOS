@@ -282,6 +282,7 @@
 
         </div>
         <div class="col-xxl-5 col-xl-5 col-lg-9 col-md-10 col-sm-11 colxs-11 col-11 mx-auto">
+           
             <div class="row">
             <div class="col-11 mx-auto mt-5 py-5">
                 <div class="row">
@@ -307,6 +308,16 @@
                         <div class="row py-3">
                             <div class="col display-5 fw-normal">
                                 ${{ $producto->precio }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-center text-white fs-5">
+                              @if($mensaje)
+                              <div class="alert alert-danger">
+                                  {{ $mensaje }}
+                              </div>
+                              @else
+                              @endif
                             </div>
                         </div>
                     </div>
@@ -374,12 +385,22 @@
                                             <div class="card-body py-5 d-flex align-items-center justify-content-center">
                                                 <div class="row mt-5">
                                                     <div class="col mt-5 d-flex align-items-center justify-content-center">
-                                                        <a href="#/">
+                                                        {{-- <a href="#/">
                                                             <img src="{{ asset('img/design/carrito2.png') }}" alt="" class="px-3">
                                                         </a>
                                                         <a href="{{ route('front.tienda_detalle', ['producto' => $produ->id]) }}">
                                                             <img src="{{ asset('img/design/view.png') }}" alt="">
-                                                        </a>                          
+                                                        </a>                           --}}
+                                                        @if ($producto->stock == 0)
+															<p class="fs-3 bg-white fw-bold text-center">Sin existencias por el momento</p>
+														@else
+															<a href="{{ route('addToCart', ['id' => $producto->id]) }}">
+																<img src="{{ asset('img/design/carrito2.png') }}" alt="" class="px-3">
+															</a>
+															<a href="{{ route('front.tienda_detalle', ['producto' => $producto->id]) }}">
+																<img src="{{ asset('img/design/view.png') }}" alt="">
+															</a>       
+														@endif
                                                     </div>
                                                 </div>
                                             </div>

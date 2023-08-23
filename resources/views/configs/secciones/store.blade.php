@@ -261,8 +261,16 @@
 													<textarea name="descripcion" id="" cols="30" rows="20" class="form-control border border-dark texteditor fs-5" placeholder="Descripción del producto" style="max-height: 200px;"></textarea>
 												</div>
 												<div class="col-10 py-3 mx-auto text-start">
-													<label for="precio" class="fs-5">Precio</label>
-													<input type="text" name="precio" class="form-control border border-dark fs-5" placeholder="Precio del producto">
+													<div class="row">
+														<div class="col-6">
+															<label for="precio" class="fs-5">Precio</label>
+															<input type="text" name="precio" class="form-control border border-dark fs-5" placeholder="Precio del producto">
+														</div>
+														<div class="col-6">
+															<label for="stock" class="fs-5">Existencias</label>
+															<input type="text" name="stock" class="form-control border border-dark fs-5" placeholder="Cantidad">
+														</div>
+													</div>
 												</div>
 												<div class="col-10 py-3 mx-auto text-start">
 													<label for="imagen" class="fs-5">Imagen del producto</label>
@@ -465,8 +473,17 @@
 																	</div>
 
 																	<div class="col-9 py-3 mx-auto">
-																		<label for="">Actualizar Precio</label>
-																		<textarea class="form-control text-start bg-transparent border-dark fs-5 editarajax m-0" id="" rows="1" name="" data-id="{{ $prod->id }} " data-table="SProducto" data-campo="precio">{{ $prod->precio }} </textarea>  
+																		
+																		<div class="row">
+																			<div class="col-6">
+																				<label for="">Actualizar Precio</label>
+																				<textarea class="form-control text-start bg-transparent border-dark fs-5 editarajax m-0" id="" rows="1" name="" data-id="{{ $prod->id }} " data-table="SProducto" data-campo="precio">{{ $prod->precio }} </textarea>  
+																			</div>
+																			<div class="col-6">
+																				<label for="">Actualizar Existencias</label>
+																				<textarea class="form-control text-start bg-transparent border-dark fs-5 editarajax m-0" id="" rows="1" name="" data-id="{{ $prod->id }} " data-table="SProducto" data-campo="stock">{{ $prod->stock }} </textarea>  
+																			</div>
+																		</div>
 																	</div>
 																	<div class="col-9 py-3 mx-auto">
 																		<form action="{{ route('config.seccion.categoriaProductoSide', ['producto' => $prod->id]) }}" method="POST" id="formunn-{{ $prod->id }}">

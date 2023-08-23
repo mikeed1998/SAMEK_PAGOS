@@ -18,26 +18,50 @@ class CarritoController extends Controller
 {
     public function getAddToCart(Request $request, $id, $pag = '') {
         $product = SProducto::find($id);
-        $oldCart = Session::has('cart') ? Session::get('cart') : null;
-        $cart = new Carrito($oldCart);
-        $cart->add($product, $product->id);
 
-        $request->session()->put('cart', $cart);
-        // dd($request->session()->get('cart'));
+        // hacer que el mensaje llege a las rutas correspondientes cuando se agote el stock
+        if($product->stock == 0) {
+            $mensaje = "Error, no puedes agregar otro ya que el producto: - " . $product->nombre . " - se encuentra agotado.";
+            if($pag == 'inicio') {
+                return redirect()->route('front.index');
+            } else if($pag == 'detalle') {
+                return redirect()->route('front.tienda_detalle', ['producto' => $id, 'mensaje' => $mensaje]);
+            } else if($pag == 'shopping') {
+                return redirect()->route('shoppingCart', ['mensaje' => $mensaje]);
+            } else {
+                return redirect()->route('front.tienda');
+            }
+        } 
+
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+            $cart = new Carrito($oldCart);
+            $cart->add($product, $product->id);
+        
+            $product->stock--;
+            $product->update();
+
+            $request->session()->put('cart', $cart);
+            // dd($request->session()->get('cart'));
 
         if($pag == 'inicio') {
             return redirect()->route('front.index');
         } else if($pag == 'detalle') {
             return redirect()->route('front.tienda_detalle', ['producto' => $id]);
+        } else if($pag == 'shopping') {
+            return redirect()->route('shoppingCart');
         } else {
             return redirect()->route('front.tienda');
         }
     }
 
     public function getReduceByOne($id) {
+        $product = SProducto::find($id);
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
         $cart = new Carrito($oldCart);
         $cart->reduceByOne($id);
+
+        $product->stock++;
+        $product->update();
 
         if(count($cart->items) > 0) {
             Session::put('cart', $cart);
@@ -49,8 +73,13 @@ class CarritoController extends Controller
     }
 
     public function getRemoveItem($id) {
+        $product = SProducto::find($id);
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
         $cart = new Carrito($oldCart);
+
+        $product->stock += $cart->items[$id]['qty'];
+        $product->update();
+
         $cart->removeItem($id);
 
         if(count($cart->items) > 0) {
@@ -62,7 +91,7 @@ class CarritoController extends Controller
         return redirect()->route('shoppingCart');
     }
 
-    public function getCart() {
+    public function getCart($mensaje = '') {
         $data = Configuracion::first();
         if(!Session::has('cart')) {
             return view('front.carrito.shopping-cart', ['products' => null, 'data' => $data]);
@@ -71,14 +100,14 @@ class CarritoController extends Controller
         $oldCart = Session::get('cart');
         $cart = new Carrito($oldCart);
 
-       
+        
 
         // foreach($cart->items as $cat) {
         //     echo $cat['price'];
         // }
         // foreach($cart->)
 
-        return view('front.carrito.shopping-cart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'data' => $data]);
+        return view('front.carrito.shopping-cart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'data' => $data, 'mensaje' => $mensaje]);
     }
 
     public function getCheckoutStripe() {
@@ -132,11 +161,12 @@ class CarritoController extends Controller
             return view('front.carrito.shopping-cart');
         }
         
+        $user = Auth::user();
         $oldCart = Session::get('cart');
         $cart = new Carrito($oldCart);
         $total = $cart->totalPrice;
 
-        return view('front.carrito.checkoutConekta', ['total' => $total, 'data' => $data]);
+        return view('front.carrito.checkoutConekta', ['total' => $total, 'data' => $data, 'user' => $user]);
     }
 
     public function postCheckoutConekta(Request $request) {

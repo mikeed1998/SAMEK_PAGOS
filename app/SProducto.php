@@ -15,5 +15,7 @@ class SProducto extends Model
         'descripcion',
         'imagen',
         'inicio',
+        'stock',
+        'sku',
 	];
 }

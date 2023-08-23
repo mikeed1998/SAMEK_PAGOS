@@ -8,15 +8,21 @@
 
 @section('content')
 @if (Session::has('cart'))
-{{-- <div class="row mt-5 mb-5">
-    <div class="col fs-1 text-center">
-        Mi carrrito de compras
-    </div>
-</div> --}}
+
 
 
 <section class="py-5" style="background-color: #eee;">
     <div class="container py-0">
+      <div class="row">
+        <div class="col text-center text-white fs-5">
+          @if($mensaje)
+          <div class="alert alert-danger">
+              {{ $mensaje }}
+          </div>
+          @else
+          @endif
+        </div>
+    </div>
       <div class="row d-flex justify-content-center align-items-center">
         <div class="col-10">
   
@@ -46,10 +52,13 @@
           </p>
         </div>
         <div class="col-md-1 col-lg-1 col-xl-1 offset-lg-1">
-            <h5 class="mb-0">{{ $prod['price'] }}</h5>
+            <h5 class="mb-0">${{ $prod['price'] }}</h5>
           </div>
         <div class="col-md-3 col-lg-3 col-xl-3 d-flex">
           <div class="row">
+            <div class="col-12 py-1">
+              <a href="{{ route('addToCart', ['id' => $prod['item']['id'], 'pag' => 'shopping']) }}" class="btn btn-sm w-100 bg-dark text-white">Agregar uno</a>
+            </div>
             <div class="col-12 py-1">
                 <a href="{{ route('reduceByOne', ['id' => $prod['item']['id']]) }}" class="btn btn-sm w-100 bg-dark text-white">Quitar uno</a>
             </div>
@@ -70,7 +79,7 @@
   
           <div class="card mt-1 mb-1">
             <div class="card-body">
-                <strong>Total de todos los productos: {{ $totalPrice }}</strong>
+                <strong>Total de todos los productos: ${{ $totalPrice }}</strong>
             </div>
           </div>
 

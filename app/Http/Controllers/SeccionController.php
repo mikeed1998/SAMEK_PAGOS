@@ -157,6 +157,7 @@ class SeccionController extends Controller
         $producto->descripcion = $request->descripcion;
         $producto->precio = $request->precio;
         $producto->categoria = $categoria;
+        $producto->stock = $request->stock;
         $producto->subcategoria = $subcategoria;
 
         $producto->save();
