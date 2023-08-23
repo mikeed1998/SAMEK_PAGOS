@@ -27,7 +27,7 @@ $(document).ready(function() {
 
 		$.ajax({
 			// url: '/rodarte/varios/editarajax',
-			url: '/varios/editarajax',
+			url: '/varios/editaraax',
 			type: 'post',
 			dataType: 'json',
 			data: {

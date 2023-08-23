@@ -464,7 +464,7 @@
 
 					@foreach ($productos as $prod)
 						@if($prod->inicio == 1)
-						<div class="col-md-3 px-3">
+						<div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12 col-12 px-3">
 							<div class="card border" style="border-radius: 16px;">
 								<div class="row">
 									<div class="col-12 position-relative">
@@ -793,7 +793,7 @@
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 3,
         infinite: true,
         dots: true

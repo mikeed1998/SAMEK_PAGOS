@@ -172,6 +172,11 @@
 					@endforeach
 				</div>
 			</div>
+			{{-- <div class="row">
+				<div class="col-6 mx-auto text-center">
+					{{ $productos->links() }}
+				</div>
+			</div> --}}
 		</div>
 	</div>
 </div>

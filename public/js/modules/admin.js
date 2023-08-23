@@ -31,6 +31,8 @@ $(document).ready(function() {
 			var tabla = $(this).attr("data-table");
 			var orden = $(this).sortable("toArray", {attribute: 'data-card'});
 			var csrf = $('meta[name="csrf-token"]').attr('content');
+
+			
 			$.ajax({
 				method: "POST",
 				// url: "/advanced/varios/orderajax",
@@ -57,6 +59,8 @@ $(document).ready(function() {
 		var valor = ($(this).val() === '') ? null : $(this).val();
 		var tcsrf = $('meta[name="csrf-token"]').attr('content');
 
+		var ruta = "{{ route('fun.editarajax') }}";
+
 		console.log(id);
 		console.log(tabla);
 		console.log(campo);
@@ -64,7 +68,8 @@ $(document).ready(function() {
 
 		$.ajax({
 			// url: '/advanced/varios/editarajax',
-			url: '/varios/editarajax',
+			// url: '/varios/editarajax',
+			url: "ruta",
 			type: 'post',
 			dataType: 'json',
 			data: {
